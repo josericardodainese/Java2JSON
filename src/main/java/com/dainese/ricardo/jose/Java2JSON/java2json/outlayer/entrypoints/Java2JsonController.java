@@ -1,5 +1,7 @@
 package com.dainese.ricardo.jose.Java2JSON.java2json.outlayer.entrypoints;
 
+import com.dainese.ricardo.jose.Java2JSON.entities.JavaObject;
+import com.dainese.ricardo.jose.Java2JSON.entities.JsonObject;
 import com.dainese.ricardo.jose.Java2JSON.java2json.outlayer.entrypoints.constants.ControllerConstants;
 import com.dainese.ricardo.jose.Java2JSON.usecases.Java2Json;
 import lombok.RequiredArgsConstructor;
@@ -25,8 +27,8 @@ public class Java2JsonController {
 
     @PostMapping(ControllerConstants.JAVA2JSON)
     @ResponseStatus(HttpStatus.OK)
-    public void submitJava2Json(@RequestBody final String java) throws IOException {
-        java2Json.execute(java);
+    public JsonObject submitJava2Json(@RequestBody final JavaObject java) throws IOException {
+       return java2Json.execute(java);
     }
 
 }

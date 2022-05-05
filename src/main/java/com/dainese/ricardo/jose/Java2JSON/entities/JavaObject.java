@@ -10,5 +10,6 @@ import lombok.experimental.FieldNameConstants;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldNameConstants
-public class Java2JsonModel {
+public class JavaObject {
+    private String stringJava;
 }
